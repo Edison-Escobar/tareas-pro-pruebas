@@ -1,0 +1,76 @@
+:root{
+  --rojo:#AA182B;
+  --navy:#011931;
+  --suave:#EDF6FB;
+  --gris:#5C6670;
+  --linea:#D8DEE4;
+  --verde:#1B6B45;
+
+  /* Color de fondo del botón principal. Sobre texto blanco debe pasar
+     el mínimo AA de 4.5 a 1. */
+  --boton:#AA182B;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#F4F6F8;
+  color:#1C2630;
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+
+.caja{max-width:760px;margin:0 auto;padding:24px 20px 80px}
+
+.portada{width:100%;height:auto;border-radius:10px;display:block}
+
+.encabezado{margin:20px 0 8px}
+.encabezado h1{margin:0;font-size:30px;color:var(--navy);letter-spacing:-.01em}
+
+.apagado{color:var(--gris);font-size:14px;margin:4px 0}
+.error{color:var(--rojo);font-size:14px;font-weight:600;margin:6px 0}
+
+.panel{background:#fff;border:1px solid var(--linea);border-radius:10px;padding:22px;margin-top:18px}
+
+.etiqueta{display:block;font-size:13px;font-weight:600;color:var(--gris);margin-bottom:6px}
+.fila{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.fila input{flex:1;min-width:200px}
+
+input,textarea{
+  font:inherit;color:inherit;background:#fff;
+  border:1.5px solid var(--linea);border-radius:7px;padding:9px 12px;width:100%;
+}
+input:focus,textarea:focus{outline:none;border-color:var(--rojo);box-shadow:0 0 0 3px rgba(170,24,43,.14)}
+textarea{margin-top:10px;resize:vertical}
+
+.boton{
+  font:inherit;font-weight:700;cursor:pointer;border:0;border-radius:8px;
+  padding:10px 22px;background:var(--boton);color:#FFFFFF;white-space:nowrap;
+}
+.boton:disabled{background:#B9C0C7;cursor:not-allowed}
+.boton.secundario{background:#fff;color:var(--navy);border:1.5px solid var(--linea);margin-top:12px}
+
+.lista{list-style:none;padding:0;margin:18px 0 0}
+.lista li{
+  display:flex;align-items:center;gap:10px;
+  padding:11px 0;border-top:1px solid var(--linea);
+}
+.lista li.hecha .titulo{text-decoration:line-through;color:var(--gris)}
+.sello{
+  font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--verde);background:#E6F3EC;border-radius:999px;padding:3px 9px;
+}
+
+.vivo{
+  margin:18px 0 0;font-size:13px;color:var(--gris);
+  background:var(--suave);border-radius:7px;padding:9px 13px;
+}
+
+.entrega{margin-top:26px;padding-top:22px;border-top:2px solid var(--linea)}
+.entrega h2{margin:0 0 4px;font-size:20px;color:var(--navy)}
+
+.resultados{list-style:none;padding:0;margin:16px 0 0;font-size:14px}
+.resultados li{display:flex;gap:10px;padding:7px 0;border-top:1px solid var(--linea)}
+.resultados .marca{font-weight:700;width:18px}
+.resultados .si .marca,.resultados li.si{color:var(--verde)}
+.resultados .no .marca,.resultados li.no{color:var(--rojo)}
