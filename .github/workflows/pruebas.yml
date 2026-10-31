@@ -47,7 +47,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Ejecutar pruebas unitarias e integración
-        run: pnpm exec vitest run
+        run: pnpm exec vitest run --coverage
 
       - name: Compilar aplicación
         run: pnpm build
@@ -57,3 +57,5 @@ jobs:
 
       - name: Ejecutar pruebas E2E
         run: pnpm test:e2e
+
+
